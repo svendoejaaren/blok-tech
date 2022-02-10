@@ -19,6 +19,7 @@
   "homepage": "https://github.com/svendoejaaren/blok-tech#readme",
   "dependencies": {
     "express": "^4.17.2",
-    "lodash": "^4.17.21"
+    "lodash": "^4.17.21",
+    "match-sorter": "^6.3.1"
   }
 }

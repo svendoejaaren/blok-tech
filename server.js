@@ -1,11 +1,16 @@
 const express = require('express')
+const { engine } = require('express-handlebars');
+
 const app = express()
 const port = process.env.PORT || 3000
 
 app.use('/static', express.static('static'))
+app.engine('hbs', engine());
+app.set('view engine', 'hbs');
+app.set('views', './view');
   
 app.get('/', (req, res) => {
-    res.status(200).send('Hello World!')
+    res.render('results')
 })
   
 app.get('/results', (req, res) => {

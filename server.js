@@ -5,17 +5,17 @@ const app = express()
 const port = process.env.PORT || 3000
 
 app.use('/static', express.static('static'))
-app.engine('hbs', engine({extname: 'hbs'}));
+app.engine('hbs', engine({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __dirname + '/view/layouts'}));
 app.set('view engine', 'hbs');
 app.set('views', './view');
   
 app.get('/', (req, res) => {
-    res.render('results')
+    res.render('index', {title: 'Filteren'})
 })
   
-app.get('/results', (req, res) => {
-    res.status(200).send('Resultaten')
-})
+// app.get('/', (req, res) => {
+//     res.render('results', { title: 'Test 1 2 3'})
+// })
   
 app.get('*', (req, res) => {
     res.status(404).send('Deze pagina bestaat niet... Jammer')

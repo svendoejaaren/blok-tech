@@ -5,7 +5,7 @@ const app = express()
 const port = process.env.PORT || 3000
 
 app.use('/static', express.static('static'))
-app.engine('hbs', engine());
+app.engine('hbs', engine({extname: 'hbs'}));
 app.set('view engine', 'hbs');
 app.set('views', './view');
   
@@ -14,11 +14,7 @@ app.get('/', (req, res) => {
 })
   
 app.get('/results', (req, res) => {
-    res.status(200).send('<h1>Resultaten</h1>')
-})
-  
-app.get('/song', (req, res) => {
-    res.status(200).send('<h1>Layla</h1>')
+    res.status(200).send('Resultaten')
 })
   
 app.get('*', (req, res) => {

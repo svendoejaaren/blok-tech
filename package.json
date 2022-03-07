@@ -1,11 +1,12 @@
 {
   "name": "blok-tech",
   "version": "1.0.0",
-  "description": "Dit is een stuk tekst om te testen",
-  "main": "index.js",
+  "description": "Feature voor blok tech",
+  "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon server.js"
+    "start": "nodemon server.js",
+    "styling": "sass static/scss/app.scss static/css/style.css --watch"
   },
   "repository": {
     "type": "git",
@@ -23,5 +24,13 @@
     "express-handlebars": "^6.0.2",
     "lodash": "^4.17.21",
     "match-sorter": "^6.3.1"
+  },
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-standard": "^16.0.3",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-promise": "^5.2.0",
+    "sass": "^1.49.9"
   }
 }

@@ -1,0 +1,46 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+:root {
+  --text-colour: #ffffff;
+  --heading-text: #362904;
+}
+
+/* Declaring font sizes */
+/* Px only in html */
+/* Modules (section, article etc.) in rem */
+/* Text elements (h1, li etc.) in em */
+
+body {
+  background-color: #d4a853;
+  color: var(--text-colour);
+}
+
+h1 {
+  color: var(--heading-text);
+}
+
+/* test voor filters */
+/* Look up if flexbox or grid is better for outlining these */
+section {
+  background-color: #8d600a;
+  border: 1px solid var(--heading-text);
+  width: 17rem; /* up for debate */
+}
+
+h2 {
+  color: var(--text-colour);
+}
+
+h2::before {
+  content: "\002B";
+  margin-right: 1em;
+}
+
+button {
+  background-color: #ae882d;
+  border: 1px solid var(--heading-text);
+}

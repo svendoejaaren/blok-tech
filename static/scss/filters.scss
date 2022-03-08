@@ -1,0 +1,45 @@
+body {
+  position: relative;
+}
+
+h2 {
+  color: $text-color;
+}
+
+h2::before {
+  content: "\002B";
+  margin: 0 0.2em;
+}
+
+section {
+  width: 19rem;
+  margin: 0 auto;
+  padding: 0.3rem;
+}
+
+section:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+div {
+  background-color: #ffffff;
+  position: absolute;
+  top: 6em;
+  left: 2.2em;
+  width: 19em;
+  padding: 0.5rem 1rem;
+}
+
+input[type="checkbox"] {
+  margin-left: 12em;
+}
+
+button {
+  position: absolute;
+  bottom: -11em;
+  left: 2.1em;
+  padding: 0.5em 2em;
+  border-radius: 50px;
+  font-size: 2em;
+  font-weight: bold;
+}

@@ -1,7 +1,6 @@
-:root {
-  --text-colour: #ffffff;
-  --heading-text: #362904;
-}
+$font-stack: Verdana, Geneva, Tahoma, sans-serif;
+$heading-color: #362904;
+$text-color: #ffffff;
 
 /* Declaring font sizes */
 /* Px only in html */
@@ -10,31 +9,22 @@
 
 body {
   background-color: #d4a853;
-  color: var(--text-colour);
+  font-family: $font-stack;
 }
 
 h1 {
-  color: var(--heading-text);
+  color: $heading-color;
+  text-align: center;
+  margin: 0.5em 0;
 }
 
-/* test voor filters */
-/* Look up if flexbox or grid is better for outlining these */
 section {
   background-color: #8d600a;
-  border: 1px solid var(--heading-text);
-  width: 17rem; /* up for debate */
-}
-
-h2 {
-  color: var(--text-colour);
-}
-
-h2::before {
-  content: "\002B";
-  margin-right: 1em;
+  border: 1px solid $heading-color;
 }
 
 button {
   background-color: #ae882d;
-  border: 1px solid var(--heading-text);
+  border: 1px solid $heading-color;
+  color: $text-color;
 }

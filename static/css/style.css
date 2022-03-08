@@ -1,42 +1,73 @@
-:root {
-  --text-colour: #ffffff;
-  --heading-text: #362904;
-}
-
 /* Declaring font sizes */
 /* Px only in html */
 /* Modules (section, article etc.) in rem */
 /* Text elements (h1, li etc.) in em */
 body {
   background-color: #d4a853;
-  color: var(--text-colour);
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 h1 {
-  color: var(--heading-text);
+  color: #362904;
+  text-align: center;
+  margin: 0.5em 0;
 }
 
-/* test voor filters */
-/* Look up if flexbox or grid is better for outlining these */
 section {
   background-color: #8d600a;
-  border: 1px solid var(--heading-text);
-  width: 17rem;
-  /* up for debate */
-}
-
-h2 {
-  color: var(--text-colour);
-}
-
-h2::before {
-  content: "+";
-  margin-right: 1em;
+  border: 1px solid #362904;
 }
 
 button {
   background-color: #ae882d;
-  border: 1px solid var(--heading-text);
+  border: 1px solid #362904;
+  color: #ffffff;
+}
+
+body {
+  position: relative;
+}
+
+h2 {
+  color: #ffffff;
+}
+
+h2::before {
+  content: "+";
+  margin: 0 0.2em;
+}
+
+section {
+  width: 19rem;
+  margin: 0 auto;
+  padding: 0.3rem;
+}
+
+section:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+
+div {
+  background-color: #ffffff;
+  position: absolute;
+  top: 6em;
+  left: 2.2em;
+  width: 19em;
+  padding: 0.5rem 1rem;
+}
+
+input[type=checkbox] {
+  margin-left: 12em;
+}
+
+button {
+  position: absolute;
+  bottom: -11em;
+  left: 2.1em;
+  padding: 0.5em 2em;
+  border-radius: 50px;
+  font-size: 2em;
+  font-weight: bold;
 }
 
 * {

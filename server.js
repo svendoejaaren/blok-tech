@@ -3,6 +3,10 @@ const { engine } = require('express-handlebars');
 
 const app = express()
 const port = process.env.PORT || 3000
+require('dotenv')
+// const connectDB = require('./db')
+
+// connectDB();
 
 app.use('/static', express.static('static'))
 app.engine('hbs', engine({extname: 'hbs', defaultLayout: 'layout', layoutsDir: __dirname + '/view/layouts'}));

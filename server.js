@@ -16,10 +16,14 @@ app.set('views', './view');
 app.get('/', (req, res) => {
     res.render('index', {title: 'Filteren'})
 })
-  
-// app.get('/', (req, res) => {
-//     res.render('results', { title: 'Test 1 2 3'})
-// })
+
+app.post('/', (req, res) => {
+  res.redirect('/resultaten')
+})
+
+app.get('/resultaten', (req, res) => {
+  res.render('results', {title: 'Resultaten'})
+})
   
 app.get('*', (req, res) => {
     res.status(404).send('Deze pagina bestaat niet... Jammer')

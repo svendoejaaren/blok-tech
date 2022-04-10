@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /* Declaring font sizes */
 /* Px only in html */
 /* Modules (section, article etc.) in rem */
@@ -28,10 +29,15 @@ h2 {
   color: #ffffff;
   margin-bottom: 0.3em;
   margin-left: 0.3em;
+  cursor: pointer;
+  transition: content ease-in 350ms;
 }
 h2::before {
-  content: "+";
+  content: "−";
   margin: 0 0.2em;
+}
+h2.plusSign::before {
+  content: "+";
 }
 
 section {
@@ -48,6 +54,9 @@ section div {
   display: grid;
   grid-template-columns: 1fr 1fr;
   row-gap: 0.5rem;
+}
+section div.showing {
+  display: none;
 }
 section input[type=checkbox] {
   margin-left: 8em;

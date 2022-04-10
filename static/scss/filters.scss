@@ -2,10 +2,16 @@ h2 {
   color: $text-color;
   margin-bottom: 0.3em;
   margin-left: 0.3em;
+  cursor: pointer;
+  transition: content ease-in 350ms;
 
   &::before {
-    content: "\002B";
+    content: "\2212";
     margin: 0 0.2em;
+  }
+
+  &.plusSign::before {
+    content: "\002B";
   }
 }
 
@@ -24,6 +30,10 @@ section {
     display: grid;
     grid-template-columns: 1fr 1fr;
     row-gap: 0.5rem;
+
+    &.showing {
+      display: none;
+    }
   }
 
   input[type="checkbox"] {

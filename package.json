@@ -6,7 +6,8 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "node server.js",
-    "styling": "sass static/scss/app.scss static/css/style.css --watch"
+    "styling": "sass static/scss/app.scss static/css/style.css --watch",
+    "dev": "nodemon server.js"
   },
   "repository": {
     "type": "git",
@@ -24,8 +25,6 @@
     "dotenv": "^16.0.0",
     "express": "^4.17.2",
     "express-handlebars": "^6.0.2",
-    "lodash": "^4.17.21",
-    "match-sorter": "^6.3.1",
     "mongodb": "^4.4.1",
     "mongoose": "^6.2.4"
   },
@@ -35,6 +34,7 @@
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",
     "eslint-plugin-promise": "^5.2.0",
+    "nodemon": "^2.0.15",
     "sass": "^1.49.9"
   }
 }
